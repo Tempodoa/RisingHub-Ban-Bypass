@@ -26,7 +26,6 @@ namespace Risinghub_Patcher
             random = new Random();
             DownloadsPath = KnownFolders.GetPath(KnownFolder.Downloads);
             DesktopPath = KnownFolders.GetPath(KnownFolder.Desktop);
-
             var DLFiles = Directory.GetFiles(DownloadsPath, "DarkLauncher.exe", SearchOption.AllDirectories);
             var DesktopFiles = Directory.GetFiles(DesktopPath, "DarkLauncher.exe", SearchOption.AllDirectories);
             string[] allFiles = DLFiles.Concat(DesktopFiles).ToArray();
@@ -83,6 +82,12 @@ namespace Risinghub_Patcher
             var FileReadRef = assembly.MainModule.ImportReference(FileReadMethod);
             mainMethod.Body.Instructions.Insert(74, Instruction.Create(OpCodes.Ldstr, "hwid.txt"));
             mainMethod.Body.Instructions.Insert(75, Instruction.Create(OpCodes.Call, FileReadRef));
+            mainMethod.Body.Instructions.RemoveAt(73);
+
+            var FormClass = assembly.MainModule.Types.First(x => x.Name == "Form1");
+            var StartMethod = FormClass.Methods.First(x => x.Name == "button1_Click");
+            StartMethod.Body.Instructions.RemoveAt(126);
+            StartMethod.Body.Instructions.RemoveAt(126);
             assembly.Write(Path.Combine(DestinationBox.Text, "DarkLauncher (Modified).exe"));
             File.WriteAllText(Path.Combine(DestinationBox.Text, "hwid.txt"),RandomString(30));
 

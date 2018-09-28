@@ -1,7 +1,6 @@
 c:\users\jannik\source\repos\Risinghub Patcher\Risinghub Patcher\bin\Debug\Risinghub Patcher.exe.config
 c:\users\jannik\source\repos\Risinghub Patcher\Risinghub Patcher\bin\Debug\Risinghub Patcher.exe
 c:\users\jannik\source\repos\Risinghub Patcher\Risinghub Patcher\bin\Debug\Risinghub Patcher.pdb
-c:\users\jannik\source\repos\Risinghub Patcher\Risinghub Patcher\obj\Debug\Risinghub Patcher.csprojAssemblyReference.cache
 c:\users\jannik\source\repos\Risinghub Patcher\Risinghub Patcher\obj\Debug\Risinghub_Patcher.MainForm.resources
 c:\users\jannik\source\repos\Risinghub Patcher\Risinghub Patcher\obj\Debug\Risinghub_Patcher.Properties.Resources.resources
 c:\users\jannik\source\repos\Risinghub Patcher\Risinghub Patcher\obj\Debug\Risinghub Patcher.csproj.GenerateResource.cache
